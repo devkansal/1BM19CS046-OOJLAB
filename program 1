@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{ int a,b,c;
+  printf("Enter a and b\n");
+  scanf("%d%d",&a,&b);
+  do
+  {printf("1.ADD\n2.SUBTRACT\n3.MULTIPLICATION\n4.DIVISION\n5.GREATER  THAN\n6.LESSER THAN\n7.EQUAL\n8.NOT\n9.REMAINDER(MODULUS) \n10.EXPONENTIAL\n0.EXIT\n");
+    scanf("%d",&c);
+    switch(c) 
+    { case 1: printf("a+b=%d\n",a+b);
+              break;
+      case 2: printf("a-b=%d\n",a-b);
+              break;
+      case 3: printf("a*b=%d\n",a*b);
+              break;
+      case 4: if(b==0)
+              {printf("Divisor cant be zero\n");}
+              else
+              {printf("a/b=%f\n",(float)(a/b));}
+              break;
+      case 5: if(a>b)
+              {printf("a is greater\n");}
+              else 
+              {printf("b is greater\n");}
+              break;
+      case 6: if(a<b)
+              {printf("a is lesser\n");}
+              else 
+              {printf("b is lesser\n");}
+              break;
+      case 7: if(a==b)
+              {printf("both are equal\n");}
+              else
+              {printf("They are not eaqual\n");}
+              break;
+      case 8: printf("NOT of a and b are %d,%d\n",!a,!b);
+              break;
+      case 9: if(b==0)
+              {printf("Divisor cant be zero\n");}
+              else
+              {printf("%d\n",a%b);}
+              break;
+      case 10:printf("a raised to b is %f",pow(a,b));
+              break;
+      default:if(c!=0)
+              printf("Enetr valid number");  
+        }
+    }while(c!=0);
+    return 0;
+}
